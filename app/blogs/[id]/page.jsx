@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { assets, blog_data } from "@/Assets/assets"; // Make sure this path is correct
 import Image from "next/image";
+import Link from "next/link";
 
 const Page = ({ params }) => {
   const [data, setData] = useState(null);
@@ -24,7 +25,7 @@ const Page = ({ params }) => {
   return (data?<>
     <div className="bg-gray-200 py-5 px-5 font-mono ">
       <div className="flex justify-between items-center">
-        <h2 className="text-xl font-semibold text-black font-mono">thinkBolt</h2>
+        <Link href={'/'} className="text-xl font-semibold text-black font-mono">thinkBolt</Link>
         <button className="flex items-center gap-2 font-medium py-1 px-3 border text-black border-black shadow-2xl">Get Started</button>
       </div>
       <div className="text-center my-24 text-black">
