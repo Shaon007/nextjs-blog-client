@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { assets, blog_data } from "@/Assets/assets"; // Make sure this path is correct
+import { assets, blog_data } from "@/Assets/assets"; 
 import Image from "next/image";
 import Link from "next/link";
 
