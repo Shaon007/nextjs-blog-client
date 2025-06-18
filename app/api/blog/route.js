@@ -10,7 +10,7 @@ LoadDB();
 
 export async function POST(request) {
   try {
-    console.log("⏳ Receiving form data...");
+    console.log(" Receiving form data...");
     const formData = await request.formData();
 
     const title = formData.get("title");
@@ -47,13 +47,13 @@ export async function POST(request) {
       authorImg: authorImg,
     };
 
-    console.log("📝 Saving to DB:", blogData);
+    console.log("Saving to DB:", blogData);
     await BlogModel.create(blogData);
-    console.log("✅ Blog saved");
+    console.log("Blog saved");
 
     return NextResponse.json({ success: true, msg: "Blog added" });
   } catch (error) {
-    console.error("🔥 API Error:", error);
+    console.error("API Error:", error);
     return NextResponse.json(
       { success: false, msg: "Internal Server Error", error: error.message },
       { status: 500 }
